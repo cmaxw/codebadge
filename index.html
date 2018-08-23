@@ -31,7 +31,7 @@
 <script type="text/javascript">
 $(function () {
 	var austDay = new Date();
-	austDay = new Date(austDay.getFullYear() + 1, 8-12, 01);
+	austDay = new Date('October 01, 2018 00:00:00 GMT-06:00');
 	$('#defaultCountdown').countdown({until: austDay});
 });
 </script>
@@ -85,10 +85,10 @@ function clickrecall(thisfield, defaulttext, color) {
 <!-- Start newsletter form -->
 <div class="ten columns" >
 <div id="form_bg">
-	<form method="post" id="myform" action="#">
-    <input name="Email" type="text" class="required email" value="enter your email address.." onclick="clickclear(this, 'enter your email address..')" onfocus="clickclear(this, 'enter your email address..')" onblur="clickrecall(this,'enter your email address..')"/>
-    <button type="submit" class="send_bt">Send Message</button>
-    </form>
+<form action="https://www.getdrip.com/forms/895890630/submissions" method="post" data-drip-embedded-form="895890630">
+  <input type="email" id="drip-email" class="required email" name="fields[email]" value="enter your email address.." onclick="clickclear(this, 'enter your email address..')" onfocus="clickclear(this, 'enter your email address..')" onblur="clickrecall(this,'enter your email address..')" />
+  <input type="submit" value="Sign Up" class="send_bt" data-drip-attribute="sign-up-button" />
+</form>
 </div>
 </div><!-- End newsletter form -->
 </div>
